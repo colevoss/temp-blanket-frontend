@@ -23,7 +23,7 @@ export function SummaryDatePicker({ date }: Props) {
         }
       }}
       value={date}
-      onChange={(d) => {
+      onAccept={(d) => {
         if (!d) {
           return
         }

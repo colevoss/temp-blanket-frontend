@@ -1,4 +1,3 @@
-import { DatePicker } from '@mui/x-date-pickers'
 import { format } from 'date-fns'
 import { DailySummary } from '../../api/summary'
 import SummaryItem from './summary-item'
@@ -10,7 +9,6 @@ type Props = {
 }
 
 export default function SummaryView({ summary }: Props) {
-  console.log(summary)
   return (
     <div className="container max-w-lg space-y-2">
       <div className="flex flex-row justify-between py-4 items-center space-x-1">

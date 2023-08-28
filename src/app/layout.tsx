@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import DatePickerContext from '../components/date-picker-context'
+import Nav from './nav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <DatePickerContext>
-          {children}
+          <main className="flex flex-col min-h-screen h-screen bg-slate-50 dark:bg-slate-900">
+            <Nav />
+            {children}
+          </main>
         </DatePickerContext>
       </body>
     </html>
