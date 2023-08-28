@@ -4,6 +4,7 @@ import SummaryView from './summary-view'
 import NewSummaryView from './new-summary-view'
 import { SummaryDatePicker } from './date-picker'
 import { Suspense } from 'react'
+import SummaryHeader from './summary-heaader'
 
 type Props = {
   searchParams: {
@@ -12,7 +13,8 @@ type Props = {
 }
 
 function parseDate(dateStr: string): Date {
-  return parse(dateStr, 'yyyyMMdd', new Date)
+  // return parse(dateStr, 'yyyyMMdd', new Date)
+  return new Date(dateStr)
 }
 
 export const revalidate = 300;
@@ -32,12 +34,10 @@ export default function Summary({ searchParams }: Props) {
   const displayDate = format(new Date(date), 'MMMM do yyyy');
 
   return (
-    <article className="flex flex-col min-w-full h-full justify-center items-center p-8">
+    <article className="flex flex-col min-w-full justify-center items-center p-8">
       <section className="container max-w-xl flex flex-col justify-center">
         <div className="flex min-w-full justify-between flex-col sm:flex-row sm:items-center items-start">
-          <h2 className="text-3xl 2xl:text-5xl font-bold text-slate-900 dark:text-slate-50 py-2">
-            {displayDate}
-          </h2>
+          <SummaryHeader date={date} />
 
           <SummaryDatePicker date={date}/>
         </div>

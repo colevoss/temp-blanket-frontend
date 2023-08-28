@@ -9,7 +9,8 @@ type Props = {
 }
 
 function formatDate(date: Date) {
-  return format(date, 'yyyyMMdd')
+  // return format(date, 'yyyyMMdd')
+  return date.toISOString()
 }
 
 export function SummaryDatePicker({ date }: Props) {
