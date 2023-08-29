@@ -8,14 +8,14 @@ export type DailySummary = {
 };
 
 // const DATE = "20230814";
-const SERVICE_URL = 'https://temperature-blanket-backend-p4bzvfsi2q-uc.a.run.app'
+const SERVICE_URL = process.env.API_URL || 'http://localhost:8080'
 
 export async function getDailySummary(
   date: Date
 ): Promise<DailySummary> {
   const dateStr = date.toISOString();
 
-  console.log("FETCHING FOR", dateStr);
+  console.log("Requesting summary for date string", dateStr);
 
   const req = await fetch(
     `${SERVICE_URL}/weather/summary?date=${dateStr}`
