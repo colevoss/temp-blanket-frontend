@@ -31,8 +31,6 @@ export default function Summary({ searchParams }: Props) {
   const dateStr = searchParams.date;
   const date = dateStr ? parseDate(dateStr) : new Date();
 
-  const displayDate = format(new Date(date), 'MMMM do yyyy');
-
   return (
     <article className="flex flex-col min-w-full justify-center items-center p-8">
       <section className="container max-w-xl flex flex-col justify-center">
