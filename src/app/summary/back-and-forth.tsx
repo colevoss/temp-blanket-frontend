@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 function BackAndForthButton({ children, href, disabled = false }: { children: React.ReactNode, href: string, disabled?: boolean }) {
   return (
-    <Link href={disabled ? {} : href} disabled={disabled} className="text-slate-900 dark:text-slate-100 border-2 rounded py-2 px-4">
+    <Link href={disabled ? {} : href} className="text-slate-900 dark:text-slate-100 border-2 rounded py-2 px-4">
       {children}
     </Link>
   )
