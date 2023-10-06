@@ -1,5 +1,3 @@
-import { format, isValid } from "date-fns";
-
 export type DailySummary = {
   high: number;
   low: number;
@@ -18,12 +16,13 @@ export async function getDailySummary(
   console.log("Requesting summary for date string", dateStr);
 
   const req = await fetch(
-    `${SERVICE_URL}/weather/summary?date=${dateStr}`
+    `${SERVICE_URL}/weather/summary?date=${dateStr}&station=LNK`
   );
 
   const res = await req.json();
 
   if (!req.ok) {
+    console.log(res)
     throw new Error(res.error || "Error Requesting Weather Data")
   }
 
