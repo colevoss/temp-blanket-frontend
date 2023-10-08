@@ -20,7 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <DatePickerContext>
-          <main className="flex flex-col min-h-screen h-screen bg-slate-50 dark:bg-slate-900">
+          <main className="flex flex-col min-h-screen bg-white dark:bg-neutral-900">
+          {/* <main className="flex flex-col bg-white dark:bg-gradient-to-r from-cyan-950 to-blue-950"> */}
             <Nav />
             {children}
           </main>
@@ -29,3 +30,4 @@ export default function RootLayout({
     </html>
   )
 }
+
