@@ -21,28 +21,29 @@ export default function SummaryPage() {
       }}
     >
       <div className="w-1/2 flex flex-col space-y-1">
-        <label htmlFor="station-search" className="dark:text-neutral-300 text-neutral-700 text-sm font-light">
-          Enter Station ID
+        <label htmlFor="station-search" className="dark:text-neutral-300 text-neutral-700 text-md font-light">
+          Station ID  (e.g. LNK, OMA)
         </label>
 
         <input
           id="station-search"
-          className="bg-white
-              flex-1
-              dark:bg-neutral-900
-              p-2
-              placeholder-neutral-500
-              border
-              border-1
-              border-neutral-300
-              dark:border-neutral-500
-              dark:text-white
-              w-full
-              rounded-lg
-            "
+          className="
+            bg-white
+            flex-1
+            dark:bg-neutral-900
+            p-2
+            placeholder-neutral-500
+            border
+            border-1
+            border-neutral-300
+            dark:border-neutral-500
+            dark:text-white
+            w-full
+            rounded-lg
+          "
           value={station}
-          placeholder="Station ID (e.g. LNK, OMA)"
-          onChange={(e) => setStation(e.target.value)}
+          placeholder="Station ID"
+          onChange={(e) => setStation(e.target.value.toUpperCase())}
         />
       </div>
 

@@ -11,7 +11,7 @@ export default function StationHeader({ station }: Props) {
     <div className="rounded-xl dark:border-0 border-1 border dark:border-neutral-500 p-6 space-y-4 dark:bg-neutral-800">
       <div className="flex flex-row justify-between items-end border-1 border-b dark:border-neutral-500 pb-4">
         <div className="flex flex-row">
-          <h1 className="xl:text-6xl md:text-3xl sm:text-xl font-light">{station.name}</h1>
+          <h1 className="xl:text-6xl md:text-3xl sm:text-2xl font-light">{station.name}</h1>
 
           <div className="font-thin mx-1 dark:text-neutral-400 sm:text-xs lg:text-sm">
             {station.state}
@@ -20,7 +20,7 @@ export default function StationHeader({ station }: Props) {
 
         <Link href={`/summary/${station.id}`}>
           <div className="rounded-md bg-gray-100 dark:bg-neutral-700 dark:text-white p-2 font-bold">
-            <h3 className="lg:text-2xl md:text-xl sm:text-sm font-thin">{station.id}</h3>
+            <h3 className="lg:text-2xl md:text-xl sm:text-sm xs:text-xs font-thin">{station.id}</h3>
           </div>
         </Link>
       </div>
